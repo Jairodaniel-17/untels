@@ -2,9 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { NextUIProvider } from '@nextui-org/react'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <NextUIProvider>
+      <div className="w-screen h-screen dark text-foreground bg-background p-8">
+        <App />
+      </div>
+    </NextUIProvider>
   </React.StrictMode>,
 )
+
